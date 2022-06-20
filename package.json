@@ -1,6 +1,6 @@
 {
     "name": "@lorransouzaaguiar/scheval",
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.1",
     "source": "src/index.js",
     "module": "dist/esmodule/index.js",
     "main": "dist/commonjs/index.js",
