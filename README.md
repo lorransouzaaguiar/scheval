@@ -7,7 +7,7 @@ Scheval é uma biblioteca de validação de dados por schema inspirado na biblio
 ## Instalação
 
 ```sh
-npm install @lorransouzaaguiar/scheval@0.0.0
+npm install @lorransouzaaguiar/scheval@1.0.0-alpha.1
 ```
 
 ## uso
