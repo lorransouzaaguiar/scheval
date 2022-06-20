@@ -1,0 +1,35 @@
+name: Make Release
+on:
+    push:
+        branches: [main, beta, alpha]
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - uses: actions/cache@v3
+              id: cache-nodemodules
+              env:
+                  cache-name: cache-node-modules
+              with:
+                  path: node_modules
+                  key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-${{ env.cache-name }}-
+                      ${{ runner.os }}-build-
+                      ${{ runner.os }}-
+
+            - name: Install Dependencies
+              if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+              run: npm install
+
+            - name: Run Test
+              run: npm run test-ci
+
+            - name: Make release
+              env:
+                GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+              run: npm run semantic-release
