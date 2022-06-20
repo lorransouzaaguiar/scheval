@@ -1,0 +1,9 @@
+[user]
+	name = your name
+	email = your email
+[alias]
+	s = !git status -s
+	c = !git commit
+	l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+[core]
+	editor = code --wait

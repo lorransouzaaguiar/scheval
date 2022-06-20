@@ -1,0 +1,23 @@
+{
+	"name": "scheval",
+	"build": {
+		"context": ".",
+		"dockerfile": "Dockerfile"
+	},
+	"workspaceFolder": "/workspaces/scheval",
+	"settings": {
+		"editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+		"extensions.autoCheckUpdates": false,
+        "extensions.autoUpdate": false,
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"js/ts.implicitProjectConfig.checkJs": true,
+		"files.associations": { "*.json": "jsonc" }
+	},
+	"extensions": [
+		"esbenp.prettier-vscode@8.0.1"
+	],
+	"forwardPorts": [8080],
+	"postStartCommand": "bash .devcontainer/on-start-container.sh",
+	"remoteUser": "node"
+}
