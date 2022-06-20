@@ -13,7 +13,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/lorransouzaaguiar/scheval-test.git"
+        "url": "https://github.com/lorransouzaaguiar/scheval.git"
     },
     "publishConfig": {
         "@lorransouzaaguiar:registry": "https://npm.pkg.github.com"
