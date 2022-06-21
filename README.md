@@ -5,7 +5,15 @@ Scheval é uma biblioteca de validação de dados por schema inspirado na biblio
 > Ainda em fase alpha, contém poucos métodos. Precisamente somente string() e number() e seu repectivo sub-metodo isRequired(). Ainda não há funcionalidade de mudar as mensagem de erro padrão
 
 ## Instalação
+Crie um arquivo <span style="color:gray"> .npmrc</span> na raiz do seu projeto. Substitua <span style="color:gray"> TOKEN</span> pelo seu [token de acesso.](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
 
+```sh
+@lorransouzaaguiar:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=TOKEN
+registry=https://registry.npmjs.org
+```
+
+E instale:
 ```sh
 npm install @lorransouzaaguiar/scheval@1.0.0-alpha.1
 ```
