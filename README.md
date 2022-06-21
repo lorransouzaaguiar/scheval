@@ -2,7 +2,7 @@
 
 Scheval é uma biblioteca de validação de dados por schema inspirado na biblioteca yup, mas com algumas pequenas diferenças. O Scheval utiliza conceitos de notification pattern, onde o retorno dos errors da validação são retornados todos de uma só vez alem de evitar gerar exceptions em validações.
 
-> Ainda em fase alpha. contém poucos métodos. Mais precisamente somente string() e number() e seus repectivos sub-metodo isRequired(). Ainda não há funcionalidade de mudar as mensagem de erro padrão
+> Ainda em fase alpha, contém poucos métodos. Precisamente somente string() e number() e seu repectivo sub-metodo isRequired(). Ainda não há funcionalidade de mudar as mensagem de erro padrão
 
 ## Instalação
 Crie um arquivo <span style="color:gray"> .npmrc</span> na raiz do seu projeto. Substitua <span style="color:gray"> TOKEN</span> pelo seu [token de acesso.](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
