@@ -2,7 +2,7 @@
 
 Scheval é uma biblioteca de validação de dados por schema inspirado na biblioteca yup, mas com algumas pequenas diferenças. O Scheval utiliza conceitos de notification pattern, onde o retorno dos errors da validação são retornados todos de uma só vez alem de evitar gerar exceptions em validações.
 
-> Ainda em fase alpha. contém poucos métodos. Mais precisamente somente string() e number() e seus repectivos sub-metodo isRequired()
+> Ainda em fase alpha. contém poucos métodos. Mais precisamente somente string() e number() e seus repectivos sub-metodo isRequired(). Ainda não há funcionalidade de mudar as mensagem de erro padrão
 
 ## Instalação
 
@@ -10,7 +10,7 @@ Scheval é uma biblioteca de validação de dados por schema inspirado na biblio
 npm install @lorransouzaaguiar/scheval@1.0.0-alpha.1
 ```
 
-## uso
+## Uso
 
 ```js
 import {val, validation} from '@lorransouzaaguiar/scheval'
@@ -31,8 +31,12 @@ const createProduct = ({ ...product }) => {
     return data
 }
 
-createProduct('João', '22', '1', 'descrição', 5)
-// errors: {price: 'The element', qtyStock: 'The element'}
+createProduct('João', '22', '1', 'descrição')
+/* errors: {
+  price: 'Expected element to be a number', 
+  qtyStock: 'Expected element to be a number',
+  category_id: 'The element is required',
+} */
 ```
 
 ## Tabela de Conteúdos
