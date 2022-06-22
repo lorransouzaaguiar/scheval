@@ -21,7 +21,7 @@ npm install @lorransouzaaguiar/scheval@1.0.0-alpha.1
 ## Uso
 
 ```js
-import {val, validation} from '@lorransouzaaguiar/scheval'
+import {val, validate} from '@lorransouzaaguiar/scheval'
 
 const createProduct = ({ ...product }) => {
 
